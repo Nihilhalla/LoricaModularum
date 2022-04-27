@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "dummy_mod_for_info:items/testleather_boots"
+  }
+}
