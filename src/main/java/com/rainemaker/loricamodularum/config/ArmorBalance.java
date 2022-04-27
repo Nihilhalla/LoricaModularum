@@ -5,6 +5,10 @@ import net.minecraftforge.common.ForgeConfigSpec;
 public class ArmorBalance {
         public static ForgeConfigSpec.IntValue loricaToughness;
         public static ForgeConfigSpec.IntValue loricaArmor;
+        public static ForgeConfigSpec.IntValue loricaHead;
+        public static ForgeConfigSpec.IntValue loricaChest;
+        public static ForgeConfigSpec.IntValue loricaLegs;
+        public static ForgeConfigSpec.IntValue loricaFeet;
         public static ForgeConfigSpec.IntValue loricaSpeed;
         public static ForgeConfigSpec.IntValue loricaDiscount;
         public static ForgeConfigSpec.IntValue loricaKnockbackReduction;
@@ -14,10 +18,18 @@ public class ArmorBalance {
 
                 loricaArmor = server.
                         comment("This is the value we'll use for armor increase multiplier")
-                        .defineInRange("balance.loricaArmor", 1, 0, 100);
+                        .defineInRange("armorMult.loricaArmor", 1, 0, 100);
+                loricaHead = server.
+                        defineInRange("values.loricaHead", 2, 0, 100);
+                loricaChest = server.
+                        defineInRange("values.loricaChest", 6, 0, 100);
+                loricaLegs = server.
+                        defineInRange("values.loricaLegs", 5, 0, 100);
+                loricaFeet = server.
+                        defineInRange("values.loricaFeet", 2, 0, 100);
                 loricaToughness = server.
                         comment("This is the value we'll use for toughness increase multiplier")
-                        .defineInRange("balance.loricaToughness", 1, 0, 100);
+                        .defineInRange("toughness.loricaToughness", 1, 0, 100);
                 loricaSpeed = server.
                         comment("This is the value we'll use for speed increase multiplier")
                         .defineInRange("balance.loricaSpeed", 1, 0, 100);

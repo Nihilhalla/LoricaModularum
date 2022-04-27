@@ -29,10 +29,10 @@ public abstract class TestLeatherArmorItem extends ArmorItem {
 			@Override
 			public int getDefenseForSlot(EquipmentSlot slot) {
 				return new int[]{
-								(2 * ArmorBalance.loricaArmor.get()), 
-								(6 * ArmorBalance.loricaArmor.get()), 
-								(5 * ArmorBalance.loricaArmor.get()), 
-								(2 * ArmorBalance.loricaArmor.get())
+								(ArmorBalance.loricaHead.get() * ArmorBalance.loricaArmor.get()), 
+								(ArmorBalance.loricaChest.get() * ArmorBalance.loricaArmor.get()), 
+								(ArmorBalance.loricaLegs.get() * ArmorBalance.loricaArmor.get()), 
+								(ArmorBalance.loricaFeet.get() * ArmorBalance.loricaArmor.get())
 				}
 								[slot.getIndex()];
 			}
