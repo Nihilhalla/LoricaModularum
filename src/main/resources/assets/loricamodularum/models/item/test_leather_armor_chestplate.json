@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "loricamodularum:items/testleather_body"
+    "layer0": "loricamodularum:items/test/testleather_body"
   }
 }
