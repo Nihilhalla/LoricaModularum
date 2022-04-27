@@ -1,6 +1,6 @@
 {
-  "item.dummy_mod_for_info.test_leather_armor_helmet": "TestLeather Helmet",
-  "item.dummy_mod_for_info.test_leather_armor_boots": "TestLeather Boots",
-  "item.dummy_mod_for_info.test_leather_armor_chestplate": "TestLeather Chestplate",
-  "item.dummy_mod_for_info.test_leather_armor_leggings": "TestLeather Leggings"
+  "item.loricamodularum.test_leather_armor_helmet": "TestLeather Helmet",
+  "item.loricamodularum.test_leather_armor_boots": "TestLeather Boots",
+  "item.loricamodularum.test_leather_armor_chestplate": "TestLeather Chestplate",
+  "item.loricamodularum.test_leather_armor_leggings": "TestLeather Leggings"
 }

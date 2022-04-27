@@ -7,32 +7,32 @@
   ],
   "key": {
     "0": {
-      "item": "minecraft:leather"
+      "item": "minecraft:netherite_scrap"
     },
     "2": {
-      "item": "minecraft:leather"
+      "item": "minecraft:netherite_scrap"
     },
     "3": {
-      "item": "minecraft:leather"
+      "item": "minecraft:netherite_scrap"
     },
     "4": {
-      "item": "minecraft:leather"
+      "item": "minecraft:netherite_scrap"
     },
     "5": {
-      "item": "minecraft:leather"
+      "item": "minecraft:netherite_scrap"
     },
     "6": {
-      "item": "minecraft:leather"
+      "item": "minecraft:netherite_scrap"
     },
     "7": {
-      "item": "minecraft:leather"
+      "item": "minecraft:netherite_scrap"
     },
     "8": {
-      "item": "minecraft:leather"
+      "item": "minecraft:netherite_scrap"
     }
   },
   "result": {
-    "item": "dummy_mod_for_info:test_leather_armor_chestplate",
+    "item": "loricamodularum:test_leather_armor_chestplate",
     "count": 1
   }
 }
