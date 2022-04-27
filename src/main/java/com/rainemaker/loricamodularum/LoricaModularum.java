@@ -34,7 +34,7 @@ import com.rainemaker.loricamodularum.init.ScoutInit;
 
 // The value here should match an entry in the META-INF/mods.toml file
 
-@Mod("LoricaModularum")
+@Mod(LoricaModularum.MODID)
 public class LoricaModularum {
     //Initialization crap
 	public static final String MODID = "loricamodularum";
