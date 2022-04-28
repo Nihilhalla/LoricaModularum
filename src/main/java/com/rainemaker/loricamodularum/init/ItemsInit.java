@@ -6,6 +6,7 @@ import net.minecraftforge.event.RegistryEvent;
 
 import net.minecraft.world.item.Item;
 
+import com.rainemaker.loricamodularum.items.generic.GenericArmorBase;
 import com.rainemaker.loricamodularum.items.generic.TestLeatherArmorItem;
 
 import java.util.List;
@@ -18,6 +19,10 @@ public class ItemsInit {
 	public static final Item TEST_LEATHER_ARMOR_CHESTPLATE = register(new TestLeatherArmorItem.Chestplate());
 	public static final Item TEST_LEATHER_ARMOR_LEGGINGS = register(new TestLeatherArmorItem.Leggings());
 	public static final Item TEST_LEATHER_ARMOR_BOOTS = register(new TestLeatherArmorItem.Boots());
+	public static final Item GENERIC_ARMOR_HELM = register(new GenericArmorBase.Helmet());
+	public static final Item GENERIC_ARMOR_CHESTPLATE = register(new GenericArmorBase.Chestplate());
+	public static final Item GENERIC__ARMOR_LEGGINGS = register(new GenericArmorBase.Leggings());
+	public static final Item GENERIC__ARMOR_BOOTS = register(new GenericArmorBase.Boots());
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

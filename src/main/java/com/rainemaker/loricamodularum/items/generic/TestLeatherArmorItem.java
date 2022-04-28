@@ -59,12 +59,12 @@ public abstract class TestLeatherArmorItem extends ArmorItem {
 
 			@Override
 			public float getToughness() {
-				return 0f;
+				return (0f + ArmorBalance.loricaToughness.get());
 			}
 
 			@Override
 			public float getKnockbackResistance() {
-				return 0f;
+				return (0f + 1 * ArmorBalance.loricaKnockbackReduction.get() / 100);
 			}
 		}, slot, properties);
 	}

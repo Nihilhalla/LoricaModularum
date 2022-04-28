@@ -7,12 +7,15 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvent;
+
+import com.rainemaker.loricamodularum.LoricaModularum;
+import com.rainemaker.loricamodularum.config.ArmorBalance;
+
 import net.minecraft.resources.ResourceLocation;
 
 public abstract class GenericArmorBase extends ArmorItem {
@@ -25,7 +28,13 @@ public abstract class GenericArmorBase extends ArmorItem {
 
 			@Override
 			public int getDefenseForSlot(EquipmentSlot slot) {
-				return new int[]{2, 6, 5, 2}[slot.getIndex()];
+				return new int[]{
+								(ArmorBalance.loricaHead.get() * ArmorBalance.loricaArmor.get()), 
+								(ArmorBalance.loricaChest.get() * ArmorBalance.loricaArmor.get()), 
+								(ArmorBalance.loricaLegs.get() * ArmorBalance.loricaArmor.get()), 
+								(ArmorBalance.loricaFeet.get() * ArmorBalance.loricaArmor.get())
+				}
+				[slot.getIndex()];
 			}
 
 			@Override
@@ -50,19 +59,19 @@ public abstract class GenericArmorBase extends ArmorItem {
 
 			@Override
 			public float getToughness() {
-				return 0f;
+				return (0f + ArmorBalance.loricaToughness.get());
 			}
 
 			@Override
 			public float getKnockbackResistance() {
-				return 0f;
+				return (0f + 1 * ArmorBalance.loricaKnockbackReduction.get() / 100);
 			}
 		}, slot, properties);
-	}
+}
 
 	public static class Helmet extends GenericArmorBase {
 		public Helmet() {
-			super(EquipmentSlot.HEAD, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
+			super(EquipmentSlot.HEAD, new Item.Properties().tab(LoricaModularum.loricaTab));
 			setRegistryName("generic_armor_helmet");
 		}
 
@@ -74,7 +83,7 @@ public abstract class GenericArmorBase extends ArmorItem {
 
 	public static class Chestplate extends GenericArmorBase {
 		public Chestplate() {
-			super(EquipmentSlot.CHEST, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
+			super(EquipmentSlot.CHEST, new Item.Properties().tab(LoricaModularum.loricaTab));
 			setRegistryName("generic_armor_chestplate");
 		}
 
@@ -86,7 +95,7 @@ public abstract class GenericArmorBase extends ArmorItem {
 
 	public static class Leggings extends GenericArmorBase {
 		public Leggings() {
-			super(EquipmentSlot.LEGS, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
+			super(EquipmentSlot.LEGS, new Item.Properties().tab(LoricaModularum.loricaTab));
 			setRegistryName("generic_armor_leggings");
 		}
 
@@ -98,7 +107,7 @@ public abstract class GenericArmorBase extends ArmorItem {
 
 	public static class Boots extends GenericArmorBase {
 		public Boots() {
-			super(EquipmentSlot.FEET, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
+			super(EquipmentSlot.FEET, new Item.Properties().tab(LoricaModularum.loricaTab));
 			setRegistryName("generic_armor_boots");
 		}
 
