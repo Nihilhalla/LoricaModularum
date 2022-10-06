@@ -9,7 +9,16 @@
   "item.loricamodularum.padded_armor_helmet": "Padded Helmet",
   "item.loricamodularum.padded_armor_boots": "Padded Boots",
   "item.loricamodularum.padded_armor_leggings": "Padded Leggings",
-  "item.loricamodularum.padded_underlay": "Padded Underlay"
-  
+  "item.loricamodularum.padded_underlay": "Padded Underlay",
+  "item.loricamodularum.reinforced_armor_chestplate": "Reinforced Chestplate",
+  "item.loricamodularum.reinforced_armor_helmet": "Reinforced Helmet",
+  "item.loricamodularum.reinforced_armor_boots": "Reinforced Boots",
+  "item.loricamodularum.reinforced_armor_leggings": "Reinforced Leggings",
+  "item.loricamodularum.reinforcement": "Armor Reinforcement",
+  "item.loricamodularum.reinforced_padded_chestplate": "Reinforced Padded Chestplate",
+  "item.loricamodularum.reinforced_padded_helmet": "Reinforced Padded Helmet",
+  "item.loricamodularum.reinforced_padded_boots": "Reinforced Padded Boots",
+  "item.loricamodularum.reinforced_padded_leggings": "Reinforced Padded Leggings"
+
   
 }

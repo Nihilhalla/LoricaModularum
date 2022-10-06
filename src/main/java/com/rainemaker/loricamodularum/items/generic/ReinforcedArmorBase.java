@@ -15,6 +15,7 @@ import net.minecraft.sounds.SoundEvent;
 import com.rainemaker.loricamodularum.LoricaModularum;
 import com.rainemaker.loricamodularum.config.ArmorBalance;
 import com.rainemaker.loricamodularum.items.Padding;
+import com.rainemaker.loricamodularum.items.Reinforcement;
 
 import org.jetbrains.annotations.ApiStatus.OverrideOnly;
 
@@ -52,12 +53,12 @@ public abstract class ReinforcedArmorBase extends ArmorItem {
 
 			@Override
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new Padding());
+				return Ingredient.of(new Reinforcement());
 			}
 
 			@Override
 			public String getName() {
-				return "padded_armor";
+				return "reinforced_armor";
 			}
 
 			@Override
@@ -72,51 +73,51 @@ public abstract class ReinforcedArmorBase extends ArmorItem {
 		}, slot, properties);
 }
 
-	public static class Helmet extends PaddedArmorBase {
+	public static class Helmet extends ReinforcedArmorBase {
 		public Helmet() {
 			super(EquipmentSlot.HEAD, new Item.Properties().tab(LoricaModularum.loricaTab));
-			setRegistryName("padded_armor_helmet");
+			setRegistryName("reinforced_armor_helmet");
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "loricamodularum:textures/models/armor/padded/lorica_layer_1.png";
+			return "loricamodularum:textures/models/armor/reinforced/lorica_layer_1.png";
 		}
 	}
 
-	public static class Chestplate extends PaddedArmorBase {
+	public static class Chestplate extends ReinforcedArmorBase {
 		public Chestplate() {
 			super(EquipmentSlot.CHEST, new Item.Properties().tab(LoricaModularum.loricaTab));
-			setRegistryName("padded_armor_chestplate");
+			setRegistryName("reinforced_armor_chestplate");
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "loricamodularum:textures/models/armor/padded/lorica_layer_1.png";
+			return "loricamodularum:textures/models/armor/reinforced/lorica_layer_1.png";
 		}
 	}
 
-	public static class Leggings extends PaddedArmorBase {
+	public static class Leggings extends ReinforcedArmorBase {
 		public Leggings() {
 			super(EquipmentSlot.LEGS, new Item.Properties().tab(LoricaModularum.loricaTab));
-			setRegistryName("padded_armor_leggings");
+			setRegistryName("reinforced_armor_leggings");
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "loricamodularum:textures/models/armor/padded/lorica_layer_2.png";
+			return "loricamodularum:textures/models/armor/reinforced/lorica_layer_2.png";
 		}
 	}
 
-	public static class Boots extends PaddedArmorBase {
+	public static class Boots extends ReinforcedArmorBase {
 		public Boots() {
 			super(EquipmentSlot.FEET, new Item.Properties().tab(LoricaModularum.loricaTab));
-			setRegistryName("padded_armor_boots");
+			setRegistryName("reinforced_armor_boots");
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "loricamodularum:textures/models/armor/padded/lorica_layer_1.png";
+			return "loricamodularum:textures/models/armor/reinforced/lorica_layer_1.png";
 		}
 	}
 }
