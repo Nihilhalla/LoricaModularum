@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+      {"item": "loricamodularum:reinforcement"}, 
+      {"item": "loricamodularum:generic_armor_chestplate"}
+  ],
+  "result": {
+      "item": "loricamodularum:reinforced_armor_chestplate",
+      "count": 1
+  }
+}

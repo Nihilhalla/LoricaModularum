@@ -1,4 +1,3 @@
-
 package com.rainemaker.loricamodularum.items.generic;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -7,19 +6,23 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvent;
 
+import com.rainemaker.loricamodularum.LoricaModularum;
 import com.rainemaker.loricamodularum.config.ArmorBalance;
+import com.rainemaker.loricamodularum.items.Padding;
+
+import org.jetbrains.annotations.ApiStatus.OverrideOnly;
 
 import net.minecraft.resources.ResourceLocation;
 
-public abstract class TestLeatherArmorItem extends ArmorItem {
-	public TestLeatherArmorItem(EquipmentSlot slot, Item.Properties properties) {
+
+public abstract class PaddedArmorBase extends ArmorItem {
+	public PaddedArmorBase(EquipmentSlot slot, Item.Properties properties) {
 		super(new ArmorMaterial() {
 			@Override
 			public int getDurabilityForSlot(EquipmentSlot slot) {
@@ -34,7 +37,7 @@ public abstract class TestLeatherArmorItem extends ArmorItem {
 								(ArmorBalance.loricaLegs.get() * ArmorBalance.loricaArmor.get()), 
 								(ArmorBalance.loricaFeet.get() * ArmorBalance.loricaArmor.get())
 				}
-								[slot.getIndex()];
+				[slot.getIndex()];
 			}
 
 			@Override
@@ -49,17 +52,17 @@ public abstract class TestLeatherArmorItem extends ArmorItem {
 
 			@Override
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(Items.LEATHER));
+				return Ingredient.of(new Padding());
 			}
 
 			@Override
 			public String getName() {
-				return "test_leather_armor";
+				return "padded_armor";
 			}
 
 			@Override
 			public float getToughness() {
-				return (0f + ArmorBalance.loricaToughness.get());
+				return (1f + ArmorBalance.loricaToughness.get().floatValue());
 			}
 
 			@Override
@@ -67,53 +70,53 @@ public abstract class TestLeatherArmorItem extends ArmorItem {
 				return (0f + 1 * ArmorBalance.loricaKnockbackReduction.get() / 100);
 			}
 		}, slot, properties);
-	}
+}
 
-	public static class Helmet extends TestLeatherArmorItem {
+	public static class Helmet extends PaddedArmorBase {
 		public Helmet() {
-			super(EquipmentSlot.HEAD, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
-			setRegistryName("test_leather_armor_helmet");
+			super(EquipmentSlot.HEAD, new Item.Properties().tab(LoricaModularum.loricaTab));
+			setRegistryName("padded_armor_helmet");
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "loricamodularum:textures/models/armor/test/testleather_layer_1.png";
+			return "loricamodularum:textures/models/armor/padded/lorica_layer_1.png";
 		}
 	}
 
-	public static class Chestplate extends TestLeatherArmorItem {
+	public static class Chestplate extends PaddedArmorBase {
 		public Chestplate() {
-			super(EquipmentSlot.CHEST, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
-			setRegistryName("test_leather_armor_chestplate");
+			super(EquipmentSlot.CHEST, new Item.Properties().tab(LoricaModularum.loricaTab));
+			setRegistryName("padded_armor_chestplate");
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "loricamodularum:textures/models/armor/test/testleather_layer_1.png";
+			return "loricamodularum:textures/models/armor/padded/lorica_layer_1.png";
 		}
 	}
 
-	public static class Leggings extends TestLeatherArmorItem {
+	public static class Leggings extends PaddedArmorBase {
 		public Leggings() {
-			super(EquipmentSlot.LEGS, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
-			setRegistryName("test_leather_armor_leggings");
+			super(EquipmentSlot.LEGS, new Item.Properties().tab(LoricaModularum.loricaTab));
+			setRegistryName("padded_armor_leggings");
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "loricamodularum:textures/models/armor/test/testleather_layer_2.png";
+			return "loricamodularum:textures/models/armor/padded/lorica_layer_2.png";
 		}
 	}
 
-	public static class Boots extends TestLeatherArmorItem {
+	public static class Boots extends PaddedArmorBase {
 		public Boots() {
-			super(EquipmentSlot.FEET, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
-			setRegistryName("test_leather_armor_boots");
+			super(EquipmentSlot.FEET, new Item.Properties().tab(LoricaModularum.loricaTab));
+			setRegistryName("padded_armor_boots");
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "loricamodularum:textures/models/armor/test/testleather_layer_1.png";
+			return "loricamodularum:textures/models/armor/padded/lorica_layer_1.png";
 		}
 	}
 }

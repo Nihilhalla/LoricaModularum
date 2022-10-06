@@ -3,7 +3,7 @@ package com.rainemaker.loricamodularum.config;
 import net.minecraftforge.common.ForgeConfigSpec;
 
 public class ArmorBalance {
-        public static ForgeConfigSpec.IntValue loricaToughness;
+        public static ForgeConfigSpec.DoubleValue loricaToughness;
         public static ForgeConfigSpec.IntValue loricaArmor;
         public static ForgeConfigSpec.IntValue loricaHead;
         public static ForgeConfigSpec.IntValue loricaChest;
@@ -29,7 +29,7 @@ public class ArmorBalance {
                         defineInRange("values.loricaFeet", 2, 0, 100);
                 loricaToughness = server.
                         comment("This is the value we'll use for toughness increase multiplier")
-                        .defineInRange("toughness.loricaToughness", 1, 0, 100);
+                        .defineInRange("toughness.loricaToughness", 1f, 0f, 100f);
                 loricaSpeed = server.
                         comment("This is the value we'll use for speed increase multiplier")
                         .defineInRange("balance.loricaSpeed", 1, 0, 100);

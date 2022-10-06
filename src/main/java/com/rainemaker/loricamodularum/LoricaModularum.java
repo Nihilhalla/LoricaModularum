@@ -77,7 +77,7 @@ public class LoricaModularum {
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack makeIcon() {
-			return new ItemStack(ItemsInit.TEST_LEATHER_ARMOR_CHESTPLATE);
+			return new ItemStack(ItemsInit.GENERIC_ARMOR_CHESTPLATE);
 		}
 	};
 

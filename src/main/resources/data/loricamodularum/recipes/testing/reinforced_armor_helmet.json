@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+      {"item": "loricamodularum:reinforcement"}, 
+      {"item": "loricamodularum:generic_armor_helmet"}
+  ],
+  "result": {
+      "item": "loricamodularum:reinforced_armor_helmet",
+      "count": 1
+  }
+}

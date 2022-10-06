@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+      {"item": "loricamodularum:reinforcement"}, 
+      {"item": "loricamodularum:generic_armor_boots"}
+  ],
+  "result": {
+      "item": "loricamodularum:reinforced_armor_boots",
+      "count": 1
+  }
+}

@@ -1,4 +1,3 @@
-
 package com.rainemaker.loricamodularum.items.generic;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -15,13 +14,15 @@ import net.minecraft.sounds.SoundEvent;
 
 import com.rainemaker.loricamodularum.LoricaModularum;
 import com.rainemaker.loricamodularum.config.ArmorBalance;
+import com.rainemaker.loricamodularum.items.Padding;
 
 import org.jetbrains.annotations.ApiStatus.OverrideOnly;
 
 import net.minecraft.resources.ResourceLocation;
 
-public abstract class GenericArmorBase extends ArmorItem {
-	public GenericArmorBase(EquipmentSlot slot, Item.Properties properties) {
+
+public abstract class ReinforcedArmorBase extends ArmorItem {
+	public ReinforcedArmorBase(EquipmentSlot slot, Item.Properties properties) {
 		super(new ArmorMaterial() {
 			@Override
 			public int getDurabilityForSlot(EquipmentSlot slot) {
@@ -51,12 +52,12 @@ public abstract class GenericArmorBase extends ArmorItem {
 
 			@Override
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(Items.NETHERITE_SCRAP));
+				return Ingredient.of(new Padding());
 			}
 
 			@Override
 			public String getName() {
-				return "generic_armor";
+				return "padded_armor";
 			}
 
 			@Override
@@ -66,56 +67,56 @@ public abstract class GenericArmorBase extends ArmorItem {
 
 			@Override
 			public float getKnockbackResistance() {
-				return (0f + 1 * ArmorBalance.loricaKnockbackReduction.get() / 100);
+				return (0f + 2 * ArmorBalance.loricaKnockbackReduction.get() / 100);
 			}
 		}, slot, properties);
 }
 
-	public static class Helmet extends GenericArmorBase {
+	public static class Helmet extends PaddedArmorBase {
 		public Helmet() {
 			super(EquipmentSlot.HEAD, new Item.Properties().tab(LoricaModularum.loricaTab));
-			setRegistryName("generic_armor_helmet");
+			setRegistryName("padded_armor_helmet");
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "loricamodularum:textures/models/armor/generic/lorica_layer_1.png";
+			return "loricamodularum:textures/models/armor/padded/lorica_layer_1.png";
 		}
 	}
 
-	public static class Chestplate extends GenericArmorBase {
+	public static class Chestplate extends PaddedArmorBase {
 		public Chestplate() {
 			super(EquipmentSlot.CHEST, new Item.Properties().tab(LoricaModularum.loricaTab));
-			setRegistryName("generic_armor_chestplate");
+			setRegistryName("padded_armor_chestplate");
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "loricamodularum:textures/models/armor/generic/lorica_layer_1.png";
+			return "loricamodularum:textures/models/armor/padded/lorica_layer_1.png";
 		}
 	}
 
-	public static class Leggings extends GenericArmorBase {
+	public static class Leggings extends PaddedArmorBase {
 		public Leggings() {
 			super(EquipmentSlot.LEGS, new Item.Properties().tab(LoricaModularum.loricaTab));
-			setRegistryName("generic_armor_leggings");
+			setRegistryName("padded_armor_leggings");
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "loricamodularum:textures/models/armor/generic/lorica_layer_2.png";
+			return "loricamodularum:textures/models/armor/padded/lorica_layer_2.png";
 		}
 	}
 
-	public static class Boots extends GenericArmorBase {
+	public static class Boots extends PaddedArmorBase {
 		public Boots() {
 			super(EquipmentSlot.FEET, new Item.Properties().tab(LoricaModularum.loricaTab));
-			setRegistryName("generic_armor_boots");
+			setRegistryName("padded_armor_boots");
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "loricamodularum:textures/models/armor/generic/lorica_layer_1.png";
+			return "loricamodularum:textures/models/armor/padded/lorica_layer_1.png";
 		}
 	}
 }

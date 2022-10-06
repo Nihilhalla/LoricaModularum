@@ -5,10 +5,11 @@
   "item.loricamodularum.generic_armor_boots": "Generic Boots",
   "item.loricamodularum.generic_armor_chestplate": "Generic Chestplate",
   "item.loricamodularum.generic_armor_leggings": "Generic Leggings",
-  "item.loricamodularum.test_leather_armor_helmet": "TestLeather Helmet",
-  "item.loricamodularum.test_leather_armor_boots": "TestLeather Boots",
-  "item.loricamodularum.test_leather_armor_chestplate": "TestLeather Chestplate",
-  "item.loricamodularum.test_leather_armor_leggings": "TestLeather Leggings"
+  "item.loricamodularum.padded_armor_chestplate": "Padded Chestplate",
+  "item.loricamodularum.padded_armor_helmet": "Padded Helmet",
+  "item.loricamodularum.padded_armor_boots": "Padded Boots",
+  "item.loricamodularum.padded_armor_leggings": "Padded Leggings",
+  "item.loricamodularum.padded_underlay": "Padded Underlay"
   
   
 }

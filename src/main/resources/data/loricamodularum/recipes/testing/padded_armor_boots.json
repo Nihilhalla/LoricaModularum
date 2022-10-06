@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+      {"item": "loricamodularum:padded_underlay"}, 
+      {"item": "loricamodularum:generic_armor_boots"}
+  ],
+  "result": {
+      "item": "loricamodularum:padded_armor_boots",
+      "count": 1
+  }
+}
